@@ -1,110 +1,384 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammad Rabi Ul Hadi</title>
-    <link rel="stylesheet" href="style.css"> 
-
+    <title>Mohammad Rabi Ul Hadi | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#1E293B',
+                        light: '#F8FAFC'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <header>
-        <h1>Mohammad Rabi Ul Hadi</h1>
-        <p>B.Tech in Computer Science & Engineering, NIT Srinagar</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li> <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-light text-dark font-sans antialiased">
+    <custom-navbar></custom-navbar>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a student at NIT Srinagar pursuing B.Tech in Computer Science and Engineering.
-            I am passionate about problem-solving.
-        </p>
-    </section>
+    <main class="container mx-auto px-4 py-12 max-w-6xl">
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-[80vh] flex flex-col justify-center items-center text-center mb-20">
+            <div class="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-secondary mb-6 overflow-hidden">
+                <img src="https://huggingface.co/spaces/morhadi/codecraft-portfolio-pro/resolve/main/images/hadi dp icpc photo_2026-01-27_21-15-29.jpg" alt="Profile" class="w-full h-full object-cover">
+            </div>
+<h1 class="text-4xl md:text-5xl font-bold mb-4">Mohammad Rabi Ul Hadi</h1>
+            <h2 class="text-xl md:text-2xl text-gray-600 mb-6">Computer Science Engineer | Data Science Enthusiast</h2>
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <a href="mailto:muhdhadiezio@gmail.com" class="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md hover:shadow-lg transition">
+                    <i data-feather="mail"></i> muhdhadiezio@gmail.com
+                </a>
+                <a href="https://drive.google.com/file/d/1tE_GkAqU-GVttyOrvnNPfH101OYjFYbM/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-md hover:shadow-lg transition">
+                    <i data-feather="file-text"></i> View Resume
+                </a>
+</div>
+            <div class="flex gap-4">
+                <a href="https://www.linkedin.com/in/mohammad-rabi-ul-hadi" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <i data-feather="linkedin"></i>
+                </a>
+                <a href="https://github.com/morhadi" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <i data-feather="github"></i>
+                </a>
+                <a href="https://morhadi.github.io/" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <i data-feather="globe"></i>
+                </a>
+                <a href="https://leetcode.com/u/morhadi/" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" width="24" height="24">
+                </a>
+                <a href="https://codeforces.com/profile/morhadi" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <img src="https://codeforces.org/s/0/images/codeforces-sponsored-by-ton.png" alt="Codeforces" width="24" height="24">
+                </a>
+                <a href="https://www.codechef.com/users/morhadi" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <img src="https://cdn.codechef.com/images/cc-logo.svg" alt="CodeChef" width="24" height="24">
+                </a>
+                            <a href="https://codolio.com/profile/morhadi" target="_blank" rel="noopener noreferrer" class="social-icon">
+                                <img src="https://huggingface.co/spaces/morhadi/codecraft-portfolio-pro/resolve/main/images/codolio.svg" alt="Codolio" width="24" height="24">
+                            </a>
+                            <a href="https://clist.by/coder/morhadi/" target="_blank" rel="noopener noreferrer" class="social-icon">
+                                <img src="https://huggingface.co/spaces/morhadi/codecraft-portfolio-pro/resolve/main/images/clist%20logo-48.png" alt="Clist" width="24" height="24">
+                            </a>
+</div>
+        </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <ul>
-            <li>
-                <strong>Health Imaging & Pharma Data Science Intern</strong>: <i>Jan - Feb 2025</i>
-                <p>Developed models for sales projection and analyzed demand patterns for inventory management.</p>
-            </li>
-            <li>
-                <strong>Hacktoberfest Open Source Developer</strong>: <i>October 2023</i>
-                <p>Contributed to open-source projects by opening multiple merged Pull Requests, gaining practical experience in Git and collaborative development.</p>
-            </li>
-        </ul>
-    </section>
+        <!-- About Section -->
+        <section id="about" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <p class="text-lg leading-relaxed mb-6">
+                    Computer Science undergraduate at NIT Srinagar with a passion for data science, algorithms, and building impactful solutions. 
+                    Experienced in developing data-driven applications and optimizing system performance.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-gray-50 p-4 rounded-lg text-center">
+                        <div class="text-primary text-2xl font-bold">700+</div>
+                        <div class="text-gray-600">Problems Solved</div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center">
+                        <div class="text-primary text-2xl font-bold">5+</div>
+                        <div class="text-gray-600">Projects</div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center">
+                        <div class="text-primary text-2xl font-bold">3</div>
+                        <div class="text-gray-600">Internships</div>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg text-center">
+                        <div class="text-primary text-2xl font-bold">1750+</div>
+                        <div class="text-gray-600">LeetCode Rating</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <strong>Quizzlent</strong>: <i>Responsive MCQ quiz website</i>
-                <a href="https://morhadi.github.io/quiz-website" target="_blank">View Live</a> |
-                 <a href="https://github.com/morhadi/quiz-website" target="_blank">View Project </a>
-            </li>
-            <li>
-                <strong>Student Management System</strong>: <i>Console-based student record manager</i>
-                <a href="https://github.com/morhadi/Student-Management-System" target="_blank">View Project </a>
-            </li>
-            <li>
-                <strong>Bloom Filter for URL Verification</strong>: <i>Efficient URL checking tool</i>
-                <a href="https://github.com/morhadi/bloom-filter" target="_blank">View Project </a>
-            </li>
-            <li>
-                <strong>DSA Visualization Tool</strong>: <i>Interactive data structure visualizer (Trapping Rain Water)</i>
-                <a href="https://morhadi.github.io/trapping-rain-water" target="_blank">View Live</a>
-                 <a href="https://github.com/morhadi/trapping-rain-water" target="_blank">View Project </a>
-            </li>
-            <li>
-                <strong>Article Extraction and Text Analysis</strong>: <i>Extracted articles from provided URLs and performed text analysis for various metrics.</i>
-                <a href="https://drive.google.com/drive/folders/1th_DiK-3_z6g2QMUgqNA_tFB5bvDEfny" target="_blank">View Project </a>
-            </li>
-            <li>
-                <strong>Mathematics Content Development (International Maths Challenge)</strong>: <i>Developed challenging math questions with detailed solutions for various topics and grade levels.</i>
-                </li>
-            <li>
-                <strong>Mutual Fund Allocation Tracker</strong>: <i>Developed a Python framework to track and analyze mutual fund allocation changes over time from large datasets.</i>
-                <a href="https://github.com/morhadi/MF-tracker" target="_blank">View Project </a>
-            </li>
-             <li>
-                <strong>AI Agent Development (WhizAIBotByHadi)</strong>: <i>Developed an AI agent to assist K-12 students with personalized learning, quizzes, and knowledge retrieval on an educational platform.</i>
-                <!-- <a href="https://github.com/morhadi/AI-Agent-Whiz" target="_blank">View Project </a> -->
-                <a href="https://t.me/botbyhadibot" target="_blank">View Live</a>
-            </li>
-        </ul>
-    </section>
+        <!-- Education Section -->
+        <section id="education" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Education</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                        <h3 class="text-xl font-bold">National Institute of Technology, Srinagar</h3>
+                        <span class="text-secondary font-medium">Nov 2022 – May 2026 (expected)</span>
+                    </div>
+                    <p class="text-gray-600 mb-2">Bachelor of Technology in Computer Science & Engineering</p>
+                    <p class="text-gray-600">CGPA: 7.9</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                        <h3 class="text-xl font-bold">Army Public School, Bangalore</h3>
+                        <span class="text-secondary font-medium">Mar 2015 – Mar 2019</span>
+                    </div>
+                    <p class="text-gray-600">Secondary Education: 96%</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="achievements">
-        <h2>Achievements</h2>
-        <ul>
-            <li>1600+ LeetCode rating</li>
-            <li>Top 2.4% in JEE Mains</li>
-            <li>Qualified multiple Olympiads and NTSE.</li>
-            <li>Ranked 1st in Times NIE Think and Learn Challenge</li>
-            <li>District-level football champion</li>
-        </ul>
-    </section>
+        <!-- Experience Section -->
+        <section id="experience" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Experience</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                        <h3 class="text-xl font-bold">Infosys - Specialist Programmer (Incoming)</h3>
+                        <span class="text-secondary font-medium">July 2026</span>
+                    </div>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Selected through a rigorous vetting process focusing on advanced Data Structures and Algorithms.</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                        <h3 class="text-xl font-bold">Sagacious Elevate - Patent Analyst Intern (Incoming)</h3>
+                        <span class="text-secondary font-medium">Feb 2026</span>
+                    </div>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Incoming intern in the patent analytics and intellectual property research team.</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                        <h3 class="text-xl font-bold">Health Imaging & Pharmaceuticals - Data Science Intern</h3>
+                        <span class="text-secondary font-medium">Jan - Feb 2025</span>
+                    </div>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Developed sales projection models and analyzed demand patterns to inform inventory management strategies.</li>
+                        <li>Identified potential for inventory cost reduction.</li>
+                        <li>Gained practical experience in data analysis using Python, scikit-learn, and other relevant libraries in a corporate setting without a pre-existing database infrastructure.</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                        <h3 class="text-xl font-bold">Hacktoberfest - Open Source Developer</h3>
+                        <span class="text-secondary font-medium">October 2023</span>
+                    </div>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Successfully merged over 5 pull requests into production for various open-source projects.</li>
+                        <li>Enhanced skills in collaborative development workflows using Git and GitHub.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:mohammad_2022bcse007@nitsri.ac.in">mohammad_2022bcse007@nitsri.ac.in</a></p>
-        <p>
-            <a href="https://linkedin.com/in/mohammad-rabi-ul-hadi-233776228/" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/morhadi" target="_blank">GitHub</a> |
-             <a href="https://morhadi.github.io/" target="_blank">Website</a> </p>
-    </section>
+        <!-- Projects Section -->
+        <section id="projects" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
+                        <i data-feather="edit" class="text-white w-16 h-16"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Quizzlent: Responsive MCQ Quiz Website</h3>
+                        <p class="text-gray-600 mb-4">Interactive quiz platform with responsive design and real-time score tracking.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">HTML/CSS</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Web Design</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://morhadi.github.io/quiz-website" target="_blank" rel="noopener noreferrer" class="text-primary font-medium flex items-center gap-2">
+                                View Live <i data-feather="external-link" class="w-4 h-4"></i>
+                            </a>
+                            <a href="https://github.com/morhadi/quiz-website" target="_blank" rel="noopener noreferrer" class="text-primary font-medium flex items-center gap-2">
+                                View Project <i data-feather="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
+                        <i data-feather="code" class="text-white w-16 h-16"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Bloom Filter for URL Verification</h3>
+                        <p class="text-gray-600 mb-4">C++ implementation demonstrating memory efficiency and performance optimization.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">C++</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Algorithms</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Optimization</span>
+                        </div>
+                        <a href="https://github.com/morhadi/bloom-filter" target="_blank" rel="noopener noreferrer" class="text-primary font-medium flex items-center gap-2">
+                            View Project <i data-feather="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
+                        <i data-feather="database" class="text-white w-16 h-16"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Student Management System</h3>
+                        <p class="text-gray-600 mb-4">Console-based student record management system with efficient data handling.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">C++</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Data Structures</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">OOP</span>
+                        </div>
+                        <a href="https://github.com/morhadi/Student-Management-System" target="_blank" rel="noopener noreferrer" class="text-primary font-medium flex items-center gap-2">
+                            View Project <i data-feather="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
+                        <i data-feather="pie-chart" class="text-white w-16 h-16"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mutual Fund Allocation Tracker</h3>
+                        <p class="text-gray-600 mb-4">Python framework for automated data processing and financial insights.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Finance</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Data Analysis</span>
+                        </div>
+                        <a href="https://github.com/morhadi/MF-tracker" target="_blank" rel="noopener noreferrer" class="text-primary font-medium flex items-center gap-2">
+                            View Project <i data-feather="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
+                        <i data-feather="monitor" class="text-white w-16 h-16"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">DSA Visualization Tool</h3>
+                        <p class="text-gray-600 mb-4">Interactive website to visualize data structure and algorithm solutions.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">DSA</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Visualization</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://morhadi.github.io/trapping-rain-water" target="_blank" rel="noopener noreferrer" class="text-primary font-medium flex items-center gap-2">
+                                View Live <i data-feather="external-link" class="w-4 h-4"></i>
+                            </a>
+                            <a href="https://github.com/morhadi/trapping-rain-water" target="_blank" rel="noopener noreferrer" class="text-primary font-medium flex items-center gap-2">
+                                View Project <i data-feather="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <p>&copy; 2025 Mohammad Rabi Ul Hadi</p>
-    </footer>
+        <!-- Skills Section -->
+        <section id="skills" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-primary">Languages</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-secondary"></i> C++
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-secondary"></i> Python
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-secondary"></i> JavaScript
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-secondary"></i> Assembly
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-secondary"></i> HTML5/CSS3
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-secondary"></i> SQL
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-primary">Libraries/Frameworks</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-secondary"></i> Pandas
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-secondary"></i> Numpy
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-secondary"></i> Matplotlib
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-secondary"></i> Seaborn
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-secondary"></i> Ncurses
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-primary">Tools/Platforms</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-secondary"></i> Git/GitHub
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-secondary"></i> OracleSQL
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-secondary"></i> Docker
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-feather="check" class="text-secondary"></i> Linux
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center">Achievements</h2>
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-4 border-l-4 border-primary bg-gray-50 rounded-r-lg">
+                        <h3 class="text-xl font-bold mb-2">Competitive Programming</h3>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Qualified for ICPC Regionals, representing my college</li>
+                            <li>Competed in 100+ coding contests, solving 700+ coding problems</li>
+                            <li>Rated 1750+ on LeetCode and ∼1500 on CodeChef</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 border-l-4 border-primary bg-gray-50 rounded-r-lg">
+                        <h3 class="text-xl font-bold mb-2">Hackathons & Competitions</h3>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Ranked 1st in NIT Srinagar Programming Contest (CodeFest)</li>
+                            <li>2nd Prize at Coding Hackathon, IUST</li>
+                            <li>3rd Prize at the BIS Project Showcase</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 border-l-4 border-primary bg-gray-50 rounded-r-lg">
+                        <h3 class="text-xl font-bold mb-2">Academic Excellence</h3>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Achieved top 2.4% percentile in JEE Mains</li>
+                            <li>Qualified multiple Olympiads and NTSE</li>
+                            <li>Ranked 1st in the Times NIE Think and Learn Challenge</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
 </body>
 </html>
